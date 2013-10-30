@@ -30,14 +30,37 @@ header
   position relative
   h1
     float left
-    margin 0 0 25px -8px
+    margin 0
 
+
+[role="navigation"]
+  ul
+    padding 0
+    height 27px
+    display block
+    float right
+    li
+      float left
+      margin-left 16px
+      position relative
+      font-size 13px
+      line-height 27px
+      &:first-child
+        margin-left 0
+      .btn-dropdown:hover
+        text-decoration none
+      a
+        display block
+        color #888
+        text-decoration none
+        &:hover
+          color #333
+          text-decoration none
 
 #logo
   font-size 50px
   color #333
   text-decoration none
-  margin-left 100px
   display block
   overflow hidden
   text-indent -999em
@@ -47,6 +70,9 @@ header
   text-align center
   font-weight 400
   font-size 13px
+  background url('/img/heading-border.png') top center no-repeat
+  padding-top 50px
+  margin 80px auto 10px
   p
     margin 5px
   a, a:visited, a:hover
