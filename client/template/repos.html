@@ -1,172 +1,42 @@
 <template name="repos">
-  <ul class="repolist js-repo-list" data-filterable-for="your-repos-filter" data-filterable-type="substring">
-
-    <li class="public source">
-      <ul class="repo-stats">
-        <li class="language">CSS</li>
-        <li class="stargazers">
-          <a href="/RixTox/metacoder/stargazers" title="Stargazers">
-            <span class="octicon octicon-star"></span>
-            0
-          </a>
-        </li>
-        <li class="forks">
-          <a href="/RixTox/metacoder/network" title="Forks">
-            <span class="octicon octicon-git-branch"></span>
-            0
-          </a>
-        </li>
-      </ul>
-
-      <span class="repolist-icon">
-        <span class="mega-octicon octicon-repo"></span>
-      </span>
-      <h3 class="repolist-name">
-        <a href="/RixTox/metacoder">metacoder</a>
-      </h3>
-
-      <div class="body">
-        <p class="description">Metacoder website</p>
-
-        <p class="updated-at">
-          Last updated
-          <time class="js-relative-date" datetime="2013-10-30T07:30:42-07:00" title="2013-10-30 07:30:42">an hour ago</time>
-        </p>
-      </div>
-      <!-- /.body --> </li>
-
-    <li class="public source">
-      <ul class="repo-stats">
-        <li class="stargazers">
-          <a href="/RixTox/monogatari-osu-skin/stargazers" title="Stargazers">
-            <span class="octicon octicon-star"></span>
-            1
-          </a>
-        </li>
-        <li class="forks">
-          <a href="/RixTox/monogatari-osu-skin/network" title="Forks">
-            <span class="octicon octicon-git-branch"></span>
-            0
-          </a>
-        </li>
-      </ul>
-
-      <span class="repolist-icon">
-        <span class="mega-octicon octicon-repo"></span>
-      </span>
-      <h3 class="repolist-name">
-        <a href="/RixTox/monogatari-osu-skin">monogatari-osu-skin</a>
-      </h3>
-
-      <div class="body">
-        <p class="description">Monogatari osu! skin.</p>
-
-        <p class="updated-at">
-          Last updated
-          <time class="js-relative-date" datetime="2013-10-04T08:14:23-07:00" title="2013-10-04 08:14:23">a month ago</time>
-        </p>
-      </div>
-      <!-- /.body --> </li>
-
-    <li class="public source">
-      <ul class="repo-stats">
-        <li class="language">CoffeeScript</li>
-        <li class="stargazers">
-          <a href="/RixTox/pactester-node/stargazers" title="Stargazers">
-            <span class="octicon octicon-star"></span>
-            0
-          </a>
-        </li>
-        <li class="forks">
-          <a href="/RixTox/pactester-node/network" title="Forks">
-            <span class="octicon octicon-git-branch"></span>
-            0
-          </a>
-        </li>
-      </ul>
-
-      <span class="repolist-icon">
-        <span class="mega-octicon octicon-repo"></span>
-      </span>
-      <h3 class="repolist-name">
-        <a href="/RixTox/pactester-node">pactester-node</a>
-      </h3>
-
-      <div class="body">
-        <p class="description">A Node.js proxy.pac tester</p>
-
-        <p class="updated-at">
-          Last updated
-          <time class="js-relative-date" datetime="2013-09-14T09:26:39-07:00" title="2013-09-14 09:26:39">2 months ago</time>
-        </p>
-      </div>
-      <!-- /.body --> </li>
-
-    <li class="public source">
-      <ul class="repo-stats">
-        <li class="stargazers">
-          <a href="/RixTox/tomorrow-sublime-theme/stargazers" title="Stargazers">
-            <span class="octicon octicon-star"></span>
-            0
-          </a>
-        </li>
-        <li class="forks">
-          <a href="/RixTox/tomorrow-sublime-theme/network" title="Forks">
-            <span class="octicon octicon-git-branch"></span>
-            0
-          </a>
-        </li>
-      </ul>
-
-      <span class="repolist-icon">
-        <span class="mega-octicon octicon-repo"></span>
-      </span>
-      <h3 class="repolist-name">
-        <a href="/RixTox/tomorrow-sublime-theme">tomorrow-sublime-theme</a>
-      </h3>
-
-      <div class="body">
-        <p class="description">My edition of Tomorrow Night color scheme for Sublime Text.</p>
-
-        <p class="updated-at">
-          Last updated
-          <time class="js-relative-date" datetime="2013-09-13T05:53:30-07:00" title="2013-09-13 05:53:30">2 months ago</time>
-        </p>
-      </div>
-      <!-- /.body --> </li>
-
-    <li class="public source">
-      <ul class="repo-stats">
-        <li class="language">CoffeeScript</li>
-        <li class="stargazers">
-          <a href="/RixTox/cms-ui/stargazers" title="Stargazers">
-            <span class="octicon octicon-star"></span>
-            0
-          </a>
-        </li>
-        <li class="forks">
-          <a href="/RixTox/cms-ui/network" title="Forks">
-            <span class="octicon octicon-git-branch"></span>
-            0
-          </a>
-        </li>
-      </ul>
-
-      <span class="repolist-icon">
-        <span class="mega-octicon octicon-repo"></span>
-      </span>
-      <h3 class="repolist-name">
-        <a href="/RixTox/cms-ui">cms-ui</a>
-      </h3>
-
-      <div class="body">
-        <p class="description">A CMS UI design</p>
-
-        <p class="updated-at">
-          Last updated
-          <time class="js-relative-date" datetime="2013-08-30T01:32:22-07:00" title="2013-08-30 01:32:22">2 months ago</time>
-        </p>
-      </div>
-      <!-- /.body --> </li>
+  <ul class="repolist">
+    {{#each repos}}
+      {{>repo}}
+    {{/each}}
   </ul>
+</template>
+
+<template name="repo">
+  <li>
+    <ul class="repo-stats">
+      <li class="language">{{language}}</li>
+      <li class="stargazers">
+        <a href="{{html_url}}/stargazers" title="Stargazers">
+          <span class="octicon octicon-star"></span>
+          {{watchers}}
+        </a>
+      </li>
+      <li class="forks">
+        <a href="{{html_url}}/network" title="Forks">
+          <span class="octicon octicon-git-branch"></span>
+          {{forks_count}}
+        </a>
+      </li>
+    </ul>
+    <span class="repolist-icon">
+      <span class="mega-octicon {{icon}}"></span>
+    </span>
+    <h3 class="repolist-name">
+      <a href="{{html_url}}">{{name}}</a>
+    </h3>
+
+    <div class="body">
+      <p class="description">{{description}}</p>
+
+      <p class="updated-at">
+        Last updated
+        <time title="{{updated_at}}">{{when updated_at}}</time>
+      </p>
+    </div>
+  </li>
 </template>

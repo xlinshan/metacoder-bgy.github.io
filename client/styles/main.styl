@@ -89,7 +89,7 @@ header
   width 800px
 
 .repolist
-  margin-top 10px
+  margin-top 20px
   a
     text-decoration none
   > li
@@ -100,6 +100,11 @@ header
     margin 0 0 20px
     list-style none
     border-bottom 1px solid #eee
+    &.simple
+      min-height 0
+    &:first-child
+      border-top 1px solid #eee
+      padding-top 20px
   .repo-stats
     position relative
     top 9px
@@ -118,31 +123,24 @@ header
         display inline-block
         padding 0 5px
         color #666
+        .octicon
+          color #888
   .repolist-icon
     float left
     margin-left -35px
     color #bbb
-    .mega-octicon
-      font normal normal 32px octicons
-      line-height 1
-      display inline-block
-      text-decoration none
-      -webkit-font-smoothing antialiased
   .repolist-name
     font-size 20px
     line-height 32px
     margin-top 0
     margin-bottom 0
     white-space nowrap
-  .body
-    text-shadow 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff
   .description
     margin 0 0 5px
-    color #333333
   .updated-at
     margin 0
     font-size 11px
-    color #999999
+    color #999
 
 
 
