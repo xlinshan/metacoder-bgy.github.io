@@ -1,9 +1,13 @@
 <template name="repos">
+{{#if repos}}
   <ul class="repolist">
     {{#each repos}}
       {{>repo}}
     {{/each}}
   </ul>
+{{else}}
+  Loading awesomeness...
+{{/if}}
 </template>
 
 <template name="repo">
