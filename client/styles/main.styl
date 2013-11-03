@@ -1,27 +1,29 @@
+@import utils
+@import config
+
 body
   font-size 16px
-  font-family proxima-nova-1, proxima-nova-2, sans-serif
+  font-family proxima-nova, sans-serif
   line-height 1.4
-  color #333333
+  color $text-color
   text-shadow 0 1px 0 white
-  background #e6e6e6 url("/img/bg-noise.gif")
+  background $grey url("/img/bg-noise.gif")
 
 header, footer
   width 980px
   z-index 10
 
 a
-  color #0a48a8
+  color $link-color
+  &:hover
+    color $text-color
 
 h1, h2, h3
   font-weight normal
-  color #333
+  color $text-color
   line-height 1.4
   font-family inherit
   margin 0
-
-h1
-  font-size 24px
 
 header
   margin 0 auto
@@ -51,15 +53,15 @@ header
         text-decoration none
       > a
         display block
-        color #888
+        color $nav-link-color
         text-decoration none
         &:hover
-          color #333
+          color $text-color
           text-decoration none
 
 #logo
   font-size 50px
-  color #333
+  color $text-color
   text-decoration none
   display block
   overflow hidden
@@ -76,7 +78,7 @@ header
   p
     margin 5px
   a, a:visited, a:hover
-    color #333
+    color $text-color
     text-decoration none
 
 .head-image
@@ -99,11 +101,11 @@ header
     padding-bottom 20px
     margin 0 0 20px
     list-style none
-    border-bottom 1px solid #eee
+    border-bottom 1px solid $light
     &.simple
       min-height 0
     &:first-child
-      border-top 1px solid #eee
+      border-top 1px solid $light
       padding-top 20px
   .repo-stats
     position relative
@@ -116,19 +118,19 @@ header
       font-size 11px
       font-weight bold
       line-height 20px
-      color #666
+      color $repo-stat-color
       &+li
         margin-left 10px
       a
         display inline-block
         padding 0 5px
-        color #666
+        color $repo-stat-color
         .octicon
-          color #888
+          color $repo-stat-icon-color
   .repolist-icon
     float left
     margin-left -35px
-    color #bbb
+    color $repo-icon-color
   .repolist-name
     font-size 20px
     line-height 32px
@@ -140,7 +142,30 @@ header
   .updated-at
     margin 0
     font-size 11px
-    color #999
+    color $repo-update-color
+
+.loader
+  width 100px
+  height 100px
+  position absolute
+  margin 100px auto 0
+  .stick
+    width 50px
+    height 6px
+    position absolute
+    top 23px
+  .left
+    left 3px
+    transform rotate(180deg)
+    animation left 1.7s infinite
+    span
+      background $blue
+  .right
+    right 3px
+    animation right 1.7s infinite
+    span
+      background $red
+
 
 
 
