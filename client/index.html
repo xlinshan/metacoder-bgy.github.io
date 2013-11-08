@@ -9,19 +9,30 @@
     <nav role="navigation">
       <ul>
         <li>
-          <a target="_blank" href="https://github.com/metacoder-bgy">GitHub</a>
+          <a href="mac.php">Mac</a>
         </li>
         <li>
-          <a href="/#members">Members</a>
+          <a href="iphone.php">iPhone</a>
         </li>
         <li>
-          <a target="_blank" href="http://bgy.gd.cn">GCGS</a>
+          <a href="support.php">Support</a>
         </li>
         <li>
-          <a href="/#contact">Contact</a>
+          <a href="http://blog.sparrowmailapp.com/">Blog</a>
         </li>
         <li>
-          <a target="_blank" href="https://groups.google.com/forum/#!forum/metacoders/join">Subscribe</a>
+          <a href="company.php">Company</a>
+        </li>
+        <li>
+          <a class="btn-dropdown">Subscribe</a>
+          <ul class="buy-options buy-options-general" style="left: -70px; opacity: 0; top: 20px;">
+            <li class="buy-mac-store-general">
+              <a href="macappstore.php" class="replace">Mac App Store</a>
+            </li>
+            <li class="buy-iphone-store-general">
+              <a href="iphone-appstore.php" class="replace">App Store</a>
+            </li>
+          </ul>
         </li>
       </ul>
     </nav>
@@ -41,16 +52,10 @@
   </div>
 </section>
 <section>
-  <div class="content">
-    <h1>Projects</h1>
-    {{>repos}}
-  </div>
+  {{>repos}}
 </section>
 <section>
-  <div class="content">
-    <h1>Members</h1>
-    {{>members}}
-  </div>
+  {{>members}}
 </section>
 <footer id="footer">
   <p>

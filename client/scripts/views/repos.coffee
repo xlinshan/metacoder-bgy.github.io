@@ -45,7 +45,6 @@ Template.repo.icon = ->
   return 'octicon-repo'
 
 Template.repo.when = (time) ->
-  console.log time
   date = new Date time
   now  = Date.now()
   tense = if now - date > 0 then 'ago' else 'after'
