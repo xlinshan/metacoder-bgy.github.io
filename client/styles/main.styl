@@ -93,7 +93,7 @@ h1
   margin 0 auto
   width 800px
 
-.repolist
+.repolist, .member-list
   margin-top 20px
   a
     text-decoration none
@@ -110,7 +110,7 @@ h1
     &:first-child
       border-top 1px solid $light
       padding-top 20px
-  .repo-stats
+  .repo-stats, .member-stats
     position relative
     top 9px
     z-index 5
@@ -130,11 +130,11 @@ h1
         color $repo-stat-color
         .octicon
           color $repo-stat-icon-color
-  .repolist-icon
+  .repolist-icon, .member-icon
     float left
     margin-left -35px
     color $repo-icon-color
-  .repolist-name
+  .repolist-name, .member-name
     font-size 20px
     line-height 32px
     margin-top 0
@@ -146,55 +146,5 @@ h1
     margin 0
     font-size 11px
     color $repo-update-color
-
-.member-list
-  margin-top 20px
-  a
-    text-decoration none
-  > li
-    position relative
-    min-height 66px
-    padding-left 35px
-    padding-bottom 20px
-    margin 0 0 20px
-    list-style none
-    border-bottom 1px solid $light
-    &.simple
-      min-height 0
-    &:first-child
-      border-top 1px solid $light
-      padding-top 20px
-  .member-stats
-    position relative
-    top 9px
-    z-index 5
-    float right
-    li
-      float left
-      list-style none
-      font-size 11px
-      font-weight bold
-      line-height 20px
-      color $repo-stat-color
-      &+li
-        margin-left 15px
-      a
-        display inline-block
-        padding 0 5px
-        color $repo-stat-color
-        .octicon
-          color $repo-stat-icon-color
-  .member-icon
-    float left
-    margin-left -35px
-    color $repo-icon-color
-  .member-name
-    font-size 20px
-    line-height 32px
-    margin-top 0
-    margin-bottom 0
-    white-space nowrap
-  .description
-    margin 0 0 5px
 
 
