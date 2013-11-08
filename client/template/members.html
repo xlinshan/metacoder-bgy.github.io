@@ -1,11 +1,15 @@
 <template name="members">
   <div class="content">
     <h1>People</h1>
+    {{#if members}}
     <ul class="member-list">
       {{#each members}}
         {{>member}}
       {{/each}}
     </ul>
+    {{else}}
+      {{>loader}}
+    {{/if}}
   </div>
 </template>
 
