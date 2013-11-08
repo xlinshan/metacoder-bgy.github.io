@@ -18,13 +18,17 @@
     <ul class="member-stats">
       {{#each links}}
         <li class="link">
-          <span class="octicon {{icon}}"></span>
-          <a target="_blank" href="{{url}}">{{title}}</a>
+          <a target="_blank" href="{{url}}">
+            <span class="octicon {{icon}}"></span>
+            {{title}}
+          </a>
         </li>
       {{/each}}
       <li class="entry-year">
-        <span class="octicon octicon-arrow-right"></span>
-        <span title="Entry year">{{entry_year}}</span>
+        <span title="Entry year">
+          <span class="octicon octicon-arrow-right"></span>
+          {{entry_year}}
+        </span>
       </li>
     </ul>
     <span class="member-icon">
