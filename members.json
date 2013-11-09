@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Rix",
+    "fullname": "Zheng Naiwei",
+    "entry_year": "2013",
+    "links": [
+      {
+        "title": "Website",
+        "url": "http://rix.li"
+      },
+      {
+        "title": "GitHub",
+        "url": "https://github.com/rixtox"
+      }
+    ]
+  },
+  {
+    "name": "Shou",
+    "fullname": "Zhang Xinyuan",
+    "entry_year": "2013",
+    "links": [
+      {
+        "title": "Website",
+        "url": "http://shouya.github.com"
+      },
+      {
+        "title": "GitHub",
+        "url": "https://github.com/shouya"
+      }
+    ]
+  },
+  {
+    "name": "Benko",
+    "fullname": "Ko Ben",
+    "entry_year": "2013",
+    "links": [
+      {
+        "title": "Website",
+        "url": "http://space.bilibili.tv/1666489"
+      },
+      {
+        "title": "GitHub",
+        "url": "https://github.com/benko789"
+      }
+    ]
+  },
+  {
+    "name": "George",
+    "fullname": "Yuan Ruofeng",
+    "entry_year": "2013"
+  },
+  {
+    "name": "Morton",
+    "fullname": "Mo Yehan",
+    "entry_year": "2013"
+  },
+  {
+    "name": "Jasmine",
+    "fullname": "Wu Huiting",
+    "entry_year": "2013"
+  }
+]

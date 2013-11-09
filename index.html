@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Metacoder - Logical Beauty</title>
+  <link rel="stylesheet" href="style/octicon.css">
+  <link rel="stylesheet" href="style/main.css">
+  <script src="script/lib/jquery.min.js"></script>
+  <script src="script/lib/underscore-min.js"></script>
+  <script src="script/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="content">
+      <h1 id="logo">Metacoder - Logical Beauty</h1>
+      <nav role="navigation">
+        <ul>
+          <li>
+            <a href="https://github.com/metacoder-bgy" target="_blank">GitHub</a>
+          </li>
+          <li>
+            <a href="http://bgy.gd.cn" target="_blank">GCGS</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="https://groups.google.com/forum/#!forum/metacoders/join" target="_blank">Subscribe</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section>
+    <img class="head-image" src="img/eta.png">
+    <div class="content">
+      <h1>Introduction</h1>
+      <p>
+        Metacoder is a club in Pre-University section of Guangdong Country Garden School founded in 2012. We consist of passionate students who are keen on computer science and math. We study, program and hack.
+      </p>
+      <p>
+        We are looking for new members. Regardless of where you are or how much you know about programming. If you have interest, please
+        <a href="#contact">contact us</a>.
+      </p>
+    </div>
+  </section>
+  <script type="text/x-underscore" id="tmpl-loader">
+    <div class="loader">
+      <div class="left stick"><span></span></div>
+      <div class="right stick"><span></span></div>
+    </div>
+  </script>
+  <script type="text/x-underscore" id="tmpl-repos">
+    <ul class="repolist">
+      <% _.each(repos, function (repo) { %>
+      <li>
+        <ul class="repo-stats">
+          <li class="language"><%= repo.language %></li>
+          <li class="stargazers">
+            <a href="<%= repo.html_url %>/stargazers" title="Stargazers">
+              <span class="octicon octicon-star"></span>
+              <%= repo.watchers %>
+            </a>
+          </li>
+          <li class="forks">
+            <a href="<%= repo.html_url %>/network" title="Forks">
+              <span class="octicon octicon-git-branch"></span>
+              <%= repo.forks_count %>
+            </a>
+          </li>
+        </ul>
+        <span class="repolist-icon">
+          <span class="mega-octicon <%= icon(repo) %>"></span>
+        </span>
+        <h3 class="repolist-name">
+          <a href="<%= repo.html_url %>"><%= repo.name %></a>
+        </h3>
+        <div class="body">
+          <p class="description"><%= repo.description %></p>
+          <p class="updated-at">
+            Last updated
+            <time title="<%= repo.updated_at %>"><%= when(repo.updated_at) %></time>
+          </p>
+        </div>
+      </li>
+      <% }); %>
+    </ul>
+  </script>
+  <script type="text/x-underscore" id="tmpl-members">
+    <ul class="member-list">
+      <% _.each(members, function (member) { %>
+      <li>
+        <ul class="member-stats">
+          <% if (member.links) { _.each(member.links, function (link) { %>
+          <li class="link">
+            <a target="_blank" href="<%= link.url %>">
+              <span class="octicon <%= icon(link) %>"></span>
+              <%= link.title %>
+            </a>
+          </li>
+          <% })}; %>
+          <li class="entry-year">
+            <span title="Entry year">
+              <span class="octicon octicon-arrow-right"></span>
+              <%= member.entry_year %>
+            </span>
+          </li>
+        </ul>
+        <span class="member-icon">
+          <span class="mega-octicon octicon-person"></span>
+        </span>
+        <h3 class="member-name"><%= member.name %></a></h3>
+        <div class="body">
+          <p class="description"><%= member.fullname ? 'Fullname: ' + member.fullname : '' %></p>
+        </div>
+      </li>
+      <% }); %>
+    </ul>
+  </script>
+  <section id="repos">
+    <div class="content">
+      <h1>Projects</h1>
+      <div class="inner"></div>
+    </div>
+  </section>
+  <section id="members">
+    <div class="content">
+      <h1>People</h1>
+      <div class="inner"></div>
+    </div>
+  </section>
+  <section>
+    <div class="content">
+      <h1 id="contact">Contact</h1>
+      <p>
+        Email:
+        <a href="mailto:shou@metacoder.org">
+          shou<span class="nospam">@</span>metacoder.org
+        </a>
+        <br>
+        Adress: Country Garden School, Beijiao Town, Foshan City, Guangdong, China.
+      </p>
+    </div>
+  </section>
+  <footer id="footer">
+    <p>
+      Powered by
+      <a href="http://www.meteor.com/" title="Meteor open-source platform">Meteor</a>
+    </p>
+    <p>Copyright &copy; 2013, Metacoder</p>
+  </footer>
+</body>
+</html>
