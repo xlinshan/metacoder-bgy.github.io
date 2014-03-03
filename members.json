@@ -30,6 +30,36 @@
     ]
   },
   {
+    "name": "Barry",
+    "fullname": "Xie Linshan",
+    "entry_year": "2014",
+    "links": [
+      {
+        "title": "Website",
+        "url": "http://lbx.4everdc.com"
+      },
+      {
+        "title": "GitHub",
+        "url": "https://github.com/xlinshan"
+      }
+    ]
+  },
+  {
+    "name": "Nat",
+    "fullname": "Zeng Honghao",
+    "entry_year": "2014",
+    "links": [
+      {
+        "title": "Website",
+        "url": "http://magicnat.com/"
+      },
+      {
+        "title": "GitHub",
+        "url": "https://github.com/NATSOFT"
+      }
+    ]
+  },
+  {
     "name": "Benko",
     "fullname": "Ko Ben",
     "entry_year": "2013",
